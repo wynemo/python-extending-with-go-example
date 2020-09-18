@@ -1,6 +1,7 @@
 [root@localhost /]# export PATH=$PATH:/usr/local/go/bin
-[root@localhost /]# gcc _newmath.c -shared -o newmath.so -I/usr/include/python2.6  -L/usr/lib64 -lpython2.6 -L . -lnewmath -fPIC
 [root@localhost /]# go build -buildmode=c-archive -o libnewmath.a  
+[root@localhost /]# gcc _newmath.c -shared -o newmath.so -I/usr/include/python2.6  -L/usr/lib64 -lpython2.6 -L . -lnewmath -fPIC
+
 
 
 import newmath
